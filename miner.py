@@ -118,7 +118,6 @@ def worker(num, address, node, dictmgr, diff, miningid, s):
 			try:
 				dmgr4 = dictmgr[3]
 				nresponse = s.get('https://' + str(node) + '/api/?q=submitshare&address=' + str(address) + '&diff=' + str(dmgr4[0]) + '&nonce=' + str(dmgr4[1]) + '&hash=' + str(dmgr4[2]))
-				print('https://' + str(node) + '/api/?q=submitshare&address=' + str(address) + '&diff=' + str(dmgr4[0]) + '&nonce=' + str(dmgr4[1]) + '&hash=' + str(dmgr4[2]))
 				print('[Worker] Share sent with diff: ' + str(dmgr4[0]) + ', hash: ' + str(dmgr4[2]))
 				dictmgr[3] = dmgr3
 				dictmgr[2] = dictmgr[2] + 1
